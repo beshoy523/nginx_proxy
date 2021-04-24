@@ -1,4 +1,4 @@
-FROM        ubuntu
+FROM debian
 
 WORKDIR /app
 
@@ -17,7 +17,5 @@ RUN cd /app && apt-get source nginx; \
     cd /app/ && git clone https://github.com/chobits/ngx_http_proxy_connect_module; \
     cd /app/nginx-* && patch -p1 < ../ngx_http_proxy_connect_module/patch/proxy_connect_rewrite_1018.patch; \
     cd /app/nginx-* && ./configure --add-module=/app/ngx_http_proxy_connect_module && make && make install;
-
-EXPOSE 8888
 
 CMD /usr/local/nginx/sbin/nginx
