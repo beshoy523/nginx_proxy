@@ -23,4 +23,4 @@ ADD nginx_whitelist.conf /usr/local/nginx/conf/nginx.conf
 
 EXPOSE 8888
 
-CMD /usr/local/nginx/sbin/nginx
+ENTRYPOINT /usr/local/nginx/sbin/nginx
