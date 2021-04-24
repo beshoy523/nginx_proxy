@@ -18,4 +18,4 @@ RUN cd /app && apt-get source nginx; \
     cd /app/nginx-* && patch -p1 < ../ngx_http_proxy_connect_module/patch/proxy_connect_rewrite_1018.patch; \
     cd /app/nginx-* && ./configure --add-module=/app/ngx_http_proxy_connect_module && make && make install;
 
-CMD ["usr", "local", "nginx", "sbin", "nginx"]
+CMD ["usr/local/nginx/sbin/nginx"]
