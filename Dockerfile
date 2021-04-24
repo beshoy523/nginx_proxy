@@ -1,4 +1,4 @@
-FROM        ubuntu:20.04
+FROM        ubuntu
 MAINTAINER  Robert Reiz <reiz@versioneye.com>
 
 WORKDIR /app
